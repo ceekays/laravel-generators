@@ -1,0 +1,22 @@
+{
+    "name": "ceekays/generators",
+    "description": "Extra generator files for Laravel 5.*",
+    "type": "project",
+    "license": "MIT License",
+    "authors": [
+        {
+            "name": "Edmond Kachale",
+            "email": "kachaleedmond@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Ceekays\\Generators\\": "src/"
+        }
+    },
+    "minimum-stability": "dev",
+    "require": {
+        "php": ">=5.4.0",
+        "illuminate/support": "^5.0"
+    }
+}

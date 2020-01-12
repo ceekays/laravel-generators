@@ -1,0 +1,10 @@
+<?php
+
+namespace DummyNamespace;
+
+use Eloquent;
+
+class DummyClass extends Eloquent
+{
+    //
+}

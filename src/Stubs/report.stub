@@ -1,0 +1,15 @@
+<?php
+
+namespace DummyNamespace;
+
+use App\Reports\AbstractReport;
+use DB;
+
+class DummyReport extends AbstractReport
+{
+    protected function buildBaseQuery()
+    {
+        // add your select criterion here
+        return DB::table("table-name")->select();
+    }
+}

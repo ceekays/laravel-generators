@@ -1,0 +1,41 @@
+<?php
+
+namespace App\Reports;
+
+use DB;
+
+abstract class AbstractReport
+{
+    /**
+     * @var \Illuminate\Database\Query\Builder
+     */
+    protected $query;
+
+    abstract protected function buildBaseQuery();
+    /**
+     * AbstractReport constructor.
+     */
+    public function __construct()
+    {
+        $this->enableStrictMode(false);
+
+        $this->query = $this->buildBaseQuery();
+    }
+
+    private function enableStrictMode($strictMode = true)
+    {
+        // if you are using mysql, you may require this in order to set STRICT MODE on and off
+        app('config')->set('database.connections.mysql.strict', $strictMode);
+        DB::reconnect();
+    }
+
+    public function get()
+    {
+        return $this->query->get();
+    }
+
+    public function __destruct()
+    {
+        $this->enableStrictMode(true);
+    }
+}
