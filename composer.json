@@ -18,5 +18,16 @@
     "require": {
         "php": ">=5.4.0",
         "illuminate/support": "^5.0"
-    }
+    },
+    "prefer-stable": true,
+    "extra": {
+        "branch-alias": {
+            "dev-master": "3.2-dev"
+        },
+        "laravel": {
+            "providers": [
+                "Ceekays\\Generators\\GeneratorsServiceProvider"
+            ]
+        }
+    },
 }
