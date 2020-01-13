@@ -1,7 +1,7 @@
 # Custom Laravel Generators
-[![Packagist License](https://poser.pugx.org/ceekays/laravel-generators/license.png)](http://choosealicense.com/licenses/mit/)
-[![Latest Stable Version](https://poser.pugx.org/ceekays/laravel-generators/version.png)](https://packagist.org/packages/ceekays/laravel-generators)
-[![Total Downloads](https://poser.pugx.org/ceekays/laravel-generators/d/total.png)](https://packagist.org/packages/ceekays/laravel-generators)
+[![License](https://poser.pugx.org/ceekays/generators/license)](https://packagist.org/packages/ceekays/generators)
+[![Latest Stable Version](https://poser.pugx.org/ceekays/generators/v/stable)](https://packagist.org/packages/ceekays/generators)
+[![Total Downloads](https://poser.pugx.org/ceekays/generators/downloads)](https://packagist.org/packages/ceekays/generators)
 
 This package provides an extended list of generators to speed up your Laravel development process. These generators include:
 
