@@ -1,6 +1,7 @@
 # Custom Laravel Generators
-
-[![Build Status](https://travis-ci.org/ceekays/laravel-generators.png?branch=master)](https://travis-ci.org/ceekays/laravel-generators)
+[![Packagist License](https://poser.pugx.org/ceekays/laravel-generators/license.png)](http://choosealicense.com/licenses/mit/)
+[![Latest Stable Version](https://poser.pugx.org/ceekays/laravel-generators/version.png)](https://packagist.org/packages/ceekays/laravel-generators)
+[![Total Downloads](https://poser.pugx.org/ceekays/laravel-generators/d/total.png)](https://packagist.org/packages/ceekays/laravel-generators)
 
 This package provides an extended list of generators to speed up your Laravel development process. These generators include:
 
@@ -11,26 +12,20 @@ Additionally, the package also overrides the default location for `Eloquent` mod
 By default, models are placed in `app/` directory. 
 However, the directory quickly becomes messy as model files get mixed up together with other specialised directories such as `Console`, `Http`,  `Jobs`, `Policies`, `Providers`, etc.
  This package overrides Laravel's behaviour of creating models and introduces a `Models` directory where your models will be located.
+
+ The package is compatible with **Laravel 5 or later.**
+
 ## Installation
 
-This package is installed using Composer. In your Laravel project, edit the `composer.json` file to require `ceekays/generators`. Additionally, let Composer know where to fetch the package by adding a `repositories` attribute:
+This package is installed using Composer.
 
-	"require": {
-		"ceekays/generators": "^1.0.0"
-	}
-    ...
-    "repositories": [
-        {
-            "type": "vcs",
-            "url": "https://github.com/ceekays/laravel-generators"
-        }
-    ]
+    composer require ceekays/generators
 
-then update Composer from the Terminal:
+### Laravel 5.5 or Later
+The package uses package auto-discovery, as such for Laravel 5.5 or later you are not required to manually add the service provider.
 
-    composer update
-
-Once this operation completes, add the following service provider to the array of providers in `config/app.php`:
+### Laravel < 5.5
+For Laravel versions lower than 5.5, add following service provider to the array of providers in `config/app.php`:
 
     Ceekays\Generators\GeneratorsServiceProvider::class,
 
