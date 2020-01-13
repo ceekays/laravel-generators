@@ -26,6 +26,10 @@ class GeneratorsServiceProvider extends ServiceProvider
      */
     public function register()
     {
+        $this->app->extend('command.model.make', function ($app) {
+            return new ModelMakeCommand(app('files'));
+        });
+
         foreach ($this->getCommands() as $register_key => $command) {
             $this->app->singleton($register_key, function ($app) use ($command) {
                 return $app[$command];
@@ -33,10 +37,6 @@ class GeneratorsServiceProvider extends ServiceProvider
 
             $this->commands($register_key);
         }
-
-        $this->app->extend('command.model.make', function ($app) {
-            return new ModelMakeCommand(app('files'));
-        });
     }
 
     private function getCommands()
