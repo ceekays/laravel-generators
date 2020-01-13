@@ -17,12 +17,12 @@ class MakeServiceCommand extends AbstractCommand
         return dirname(__DIR__) . '/Stubs/service.stub';
     }
 
-    protected function getTemplatePlaceholders()
+    protected function getPlaceholders()
     {
         return ['DummyService'];
     }
 
-    protected function getPlaceholderReplacements($name)
+    protected function getSubstitutes($name)
     {
         return [str_replace($this->getNamespace($name) . '\\', '', $name)];
     }

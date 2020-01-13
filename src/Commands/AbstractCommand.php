@@ -10,9 +10,9 @@ use Symfony\Component\Console\Input\InputArgument;
 
 abstract class AbstractCommand extends GeneratorCommand
 {
-    abstract  protected function getTemplatePlaceholders();
+    abstract  protected function getPlaceholders();
 
-    abstract protected function getPlaceholderReplacements($name);
+    abstract protected function getSubstitutes($name);
 
     abstract protected function getBaseDirectoryName();
 
@@ -20,11 +20,7 @@ abstract class AbstractCommand extends GeneratorCommand
 
     protected function replaceClass($stub, $name)
     {
-        return str_replace(
-            $this->getTemplatePlaceholders(),
-            $this->getPlaceholderReplacements($name),
-            parent::replaceClass($stub, $name)
-        );
+        return str_replace($this->getPlaceholders(), $this->getSubstitutes($name), parent::replaceClass($stub, $name));
     }
 
     protected function getDefaultNamespace($rootNamespace)

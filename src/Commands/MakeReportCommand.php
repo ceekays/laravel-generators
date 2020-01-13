@@ -33,12 +33,12 @@ class MakeReportCommand extends AbstractCommand
         return parent::replaceClass($stub, $name);
     }
 
-    protected function getTemplatePlaceholders()
+    protected function getPlaceholders()
     {
         return ['DummyReport', 'table-name'];
     }
 
-    protected function getPlaceholderReplacements($name)
+    protected function getSubstitutes($name)
     {
         return [
             str_replace($this->getNamespace($name) . '\\', '', $name),
