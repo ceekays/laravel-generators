@@ -35,3 +35,7 @@ That's it! You're all set to go. Run the `php artisan` command from the Terminal
 - The `make:model` command has not changed its default behaviour except for the location of the models.
 - `php artisan make:report UsersReport --table=users` or `php artisan make:report UsersReport -t users`
 - `php artisan make:service CreateUserService`
+
+
+## License
+This package is open-sourced software licensed under the [MIT license](license.md).
